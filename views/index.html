@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+    <input name="uploadImg" id="uploadImg" type="file" style="border:1px solid #ddd;padding: 4px 10px;line-height: 24px;" />
+    <button id="submit">提交1</button>
+</div>
+<script>
+    $("#submit").on("click",function(){
+    	var formData = new FormData();
+    	var fileObj = document.getElementById("uploadImg").files[0];
+		formData.append("imgdata", fileObj);
+		//formData.append("imgdata",$("#uploadImg")[0].files[0])
+		//console.log(fileObj);
+		console.log(formData);
+		//return;
+    	$.ajax({
+			type:"post",
+			url:"http://localhost:3000/api/uploadimg",
+			data:formData,
+			processData:false,
+			contentType:false,
+			timeout: 18000000,
+			success:function(data){
+				console.log(JSON.stringify(data));
+				
+			},error:function(error){
+				console.log(JSON.stringify(error));
+			}
+		});
+    })
+</script>
+{% endblock %}

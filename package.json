@@ -1,0 +1,34 @@
+{
+    "name": "nodetest",
+    "version": "1.0.0",
+    "description": "Node web test",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "keywords": [
+        "koa",
+        "async"
+    ],
+    "author": "Hzy",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/michaelliao/learn-javascript.git"
+    },
+    "dependencies": {
+        "koa": "^2.6.1",
+        "koa-bodyparser": "3.2.0",
+        "koa-cors": "0.0.16",
+        "koa-router": "7.0.0",
+        "mime": "^2.3.1",
+        "mysql": "^2.16.0",
+        "mz": "2.4.0",
+        "node-mysql": "^0.4.2",
+        "node-uuid": "1.4.8",
+        "nunjucks": "^3.1.3",
+        "sequelize": "^3.24.1",
+        "formidable": "^1.2.1",
+        "ws": "1.1.1"
+    }
+}
